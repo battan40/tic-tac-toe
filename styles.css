@@ -45,3 +45,32 @@ button:hover {
   color: slateblue;
 
 }
+
+/* ~~~~~ MIDDLE GRID ~~~~~ */
+.middle-box {
+  width: 53%;
+  height: 100%;
+}
+
+.top-title {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.game-board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px 20px;
+  padding: 2%;
+  box-shadow: 0 4px 8px 0 lavender;
+  background-image: linear-gradient(#f0eadc 1%, #b9efe1, lavender);
+  background-size: contain;
+  height: 100vh
+}
+
+.board-squares {
+  background: #ffffff;
+  padding: 3%;
+  display: flex;
+}
