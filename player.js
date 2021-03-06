@@ -1,7 +1,10 @@
 class Player {
-  constructor(star, heart) {
+  constructor(playerName, icon) {
+    console.log(playerName);
+    console.log(icon);
+    this.name = playerName;
     this.id = Date.now();
-    this.icon = star || heart;
+    this.icon = icon;
     this.winCount = 0;
   }
 
@@ -9,7 +12,7 @@ class Player {
     var stringifyIt = JSON.stringify(this);
     localStorage.setItem(this.id, stringifyIt)
   }
-  
+
   retrieveWinsFromStorage() {
     var idDWin = Object.keys(localStorage);
     for (var i = 0; i < idDWin.length; i++){

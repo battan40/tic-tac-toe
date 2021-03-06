@@ -8,4 +8,5 @@ function pickSquare(event) {
   var clickedSquare = event.target.id;
   game.playGame(clickedSquare);
   changePlayer();
+  console.log("Inside PickSquare var", clickedSquare)
 }
