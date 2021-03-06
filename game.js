@@ -1,5 +1,5 @@
 class Game {
-  constructor(info) {
+  constructor() {
     this.playerOne = new Player('player1', '♥️');
     this.playerTwo = new Player('player2', '⭐');
     this.turnTracker = "player1";
@@ -17,12 +17,14 @@ class Game {
     }
   }
   playGame(chosenSquare) {
-    if (this.gameBoard[chosenSquare] === null) {
-      this.insertIcon(chosenSquare);
+    if (this.gameBoard[chosenSquare] === null)  {
+      this.addIcon();
+      console.log("Within PlayGame");
     }
   }
-  insertIcon() {
-
+  addIcon() {
+    this.gameBoard.innerText = this.playerOne.icon;
+    console.log("insertIcon properties", this.playerOne.icon)
   }
   changePlayer() {
 
