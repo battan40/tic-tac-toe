@@ -1,0 +1,104 @@
+/* ~~~~~ GLOBAL RULES ~~~~~ */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  color: slateblue;
+}
+
+button:hover {
+  border: none;
+  outline: none;
+  color: slateblue;
+}
+
+
+.squares {
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.main {
+  display: flex;
+  margin: 0;
+  width: 100%;
+}
+
+/* ~~~~~ Left ~~~~~ */
+.left {
+  background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
+  width: 28%;
+  height: 104vh;
+}
+
+.player1-icon {
+  display: flex;
+}
+
+.left-Player {
+  display: flex;
+  color: slateblue;
+}
+
+/* ~~~~~ MIDDLE GRID ~~~~~ */
+.middle-box {
+  width: 53%;
+  height: 100%;
+}
+
+.top-title {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.game-board-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px 20px;
+  padding: 2%;
+  box-shadow: 0 4px 8px 0 lavender;
+  background-image: linear-gradient(#f0eadc 1%, #b9efe1, lavender);
+  background-size: contain;
+  height: 100vh
+}
+
+.board-squares {
+  background: #ffffff;
+  padding: 3%;
+  display: flex;
+  border: 4px solid lavender;
+  box-shadow: 10px 5px 5px lavender;
+  color: slateblue;
+}
+
+/* ~~~~~ RIGHT ~~~~~ */
+.right {
+  background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
+  width: 28%;
+  height: 104vh;
+}
+
+.right-player {
+  display: flex;
+  color: slateblue;
+}
+
+.player2-icon {
+  display: flex;
+}
+
+/* ~~~~~ BROAD ~~~~~ */
+.hidden {
+  display: none;
+}
