@@ -14,7 +14,7 @@ html {
 
 button:hover {
   border: none;
-}
+} */
 
 .squares {
   cursor: pointer;
@@ -32,7 +32,7 @@ button:hover {
 /* ~~~~~ Left ~~~~~ */
 .left {
   background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
-  width: 28vh;
+  width: 28%;
   height: 104vh;
 }
 
@@ -43,7 +43,6 @@ button:hover {
 .left-Player {
   display: flex;
   color: slateblue;
-
 }
 
 /* ~~~~~ MIDDLE GRID ~~~~~ */
@@ -56,10 +55,12 @@ button:hover {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  border-radius: 4px;
 }
 
 .game-board-grid {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px 20px;
   padding: 2%;
@@ -72,5 +73,40 @@ button:hover {
 .board-squares {
   background: #ffffff;
   padding: 3%;
+  display: flex;
+  border: 4px solid lavender;
+  box-shadow: 10px 5px 5px lavender;
+}
+
+
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:hover {
+  background: lavender radial-gradient(circle, transparent .3%, #D5F5EE 1%) center/15000%;
+}
+
+.ripple:active {
+  background-color: #D5F5EE;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* ~~~~~ RIGHT ~~~~~ */
+.right {
+  background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
+  width: 28%;
+  height: 104vh;
+}
+
+.right-player {
+  display: flex;
+  color: slateblue;
+}
+
+.player2-icon {
   display: flex;
 }
