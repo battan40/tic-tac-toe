@@ -5,5 +5,10 @@ class Player {
     this.winCount = 0;
     this.winsContainer = [];
   }
-  
+  saveWinsToStorage() {
+    var stringifyIt = JSON.stringify(this);
+    localStorage.setItem(this.id, stringifyIt)
+  }
+
+  }
 }
