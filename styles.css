@@ -15,7 +15,9 @@ html {
 button:hover {
   border: none;
   outline: none;
+  color: slateblue;
 }
+
 
 .squares {
   cursor: pointer;
@@ -77,6 +79,7 @@ button:hover {
   display: flex;
   border: 4px solid lavender;
   box-shadow: 10px 5px 5px lavender;
+  color: slateblue;
 }
 
 /* ~~~~~ RIGHT ~~~~~ */
