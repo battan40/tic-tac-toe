@@ -28,3 +28,20 @@ button:hover {
   margin: 0;
   width: 100%;
 }
+
+/* ~~~~~ Left ~~~~~ */
+.left {
+  background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
+  width: 28vh;
+  height: 104vh;
+}
+
+.player1-icon {
+  display: flex;
+}
+
+.left-Player {
+  display: flex;
+  color: slateblue;
+
+}
