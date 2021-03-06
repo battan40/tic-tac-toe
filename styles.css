@@ -14,7 +14,8 @@ html {
 
 button:hover {
   border: none;
-} */
+  outline: none;
+}
 
 .squares {
   cursor: pointer;
@@ -76,23 +77,6 @@ button:hover {
   display: flex;
   border: 4px solid lavender;
   box-shadow: 10px 5px 5px lavender;
-}
-
-
-
-.ripple {
-  background-position: center;
-  transition: background 0.8s;
-}
-
-.ripple:hover {
-  background: lavender radial-gradient(circle, transparent .3%, #D5F5EE 1%) center/15000%;
-}
-
-.ripple:active {
-  background-color: #D5F5EE;
-  background-size: 100%;
-  transition: background 0s;
 }
 
 /* ~~~~~ RIGHT ~~~~~ */
