@@ -16,4 +16,15 @@ class Game {
       lastRowRight: null,
     }
   }
+  playGame(chosenSquare) {
+    if (this.gameBoard[chosenSquare] === null) {
+      this.insertIcon(chosenSquare);
+    }
+  }
+  insertIcon() {
+
+  }
+  changePlayer() {
+
+  }
 }
