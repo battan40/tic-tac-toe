@@ -110,3 +110,8 @@ button:hover {
 .player2-icon {
   display: flex;
 }
+
+/* ~~~~~ BROAD ~~~~~ */
+.hidden {
+  display: none;
+}
