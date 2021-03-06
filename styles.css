@@ -1,0 +1,30 @@
+/* ~~~~~ GLOBAL RULES ~~~~~ */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  color: slateblue;
+}
+
+button:hover {
+  border: none;
+}
+
+.squares {
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.main {
+  display: flex;
+  margin: 0;
+  width: 100%;
+}
