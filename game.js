@@ -33,3 +33,10 @@ class Game {
     }
       this.changePlayer();
   }
+
+  changePlayer() {
+    if (this.turnTracker === playerOne.id) {
+      this.turnTracker = playerTwo.id;
+      console.log(this.turnTracker);
+    }
+  }
