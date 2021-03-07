@@ -17,14 +17,13 @@ class Game {
     }
   }
   playGame(chosenSquare) {
-    if (this.gameBoard[chosenSquare] === null)  {
+    if (chosenSquare.value === null)  {
       this.addIcon();
-      console.log("Within PlayGame");
+
     }
   }
   addIcon() {
     this.gameBoard.innerText = this.playerOne.icon;
-    console.log("insertIcon properties", this.playerOne.icon)
   }
   changePlayer() {
 
