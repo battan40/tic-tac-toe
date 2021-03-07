@@ -40,3 +40,19 @@ class Game {
       console.log(this.turnTracker);
     }
   }
+
+
+    searchForWin(personPlaying) {
+      console.log("searchForWin", personPlaying)
+      for (var i = 0; i < allPossibleWins.length; i++) {
+        if (this.squaresPlayedList.includes(allPossibleWins[i])) {
+        personPlaying.winCount++
+        this.win = true;
+        console.log(personPlaying.winCount)
+        personPlaying.saveWinsToStorage();
+      }
+    }
+      this.searchForATie();
+  }
+
+  
