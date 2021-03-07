@@ -18,16 +18,16 @@
         <h1 class="top-title">Tic Tac Toe</h1>
         <p class="winner-declaration hidden">Player 2 IS THE WINNER!</p>
         <section class="game-board-grid" id="gameBoardGrid">
-          <button class="board-squares ripple">x</button>
-          <button class="board-squares ripple">x</button>
-          <button class="board-squares ripple">x</button>
-          <button class="board-squares ripple">x</button>
-          <button class="board-squares ripple">x</button>
-          <button class="board-squares ripple">x</button>
-          <button class="board-squares ripple">x</button>
-          <button class="board-squares ripple">x</button>
-          <button class="board-squares ripple">x</button>
-       </section>
+          <button class="board-squares" id="topRowLeft">x</button>
+          <button class="board-squares" id="topRowMiddle">x</button>
+          <button class="board-squares" id="topRowRight">x</button>
+          <button class="board-squares" id="centerRowLeft">x</button>
+          <button class="board-squares" id="centerRowMiddle">x</button>
+          <button class="board-squares" id="centerRowRight">x</button>
+          <button class="board-squares" id="lastRowLeft">x</button>
+          <button class="board-squares" id="lastRowMiddle">x</button>
+          <button class="board-squares" id="lastRowRight">x</button>
+        </section>
          <article class="squares"></article>
      </section>
      <section class="right">
@@ -35,8 +35,8 @@
        <h1 class="right-player" id="rightPlayer">Wins</h1>
      </section>
     </main>
-    <script text="text/javascript" scr="./game.js"></script>
-    <script text="text/javascript" scr="./player.js"></script>
+    <script text="text/javascript" src="./game.js"></script>
+    <script text="text/javascript" src="./player.js"></script>
     <script text="text/javascript" src="./main.js"></script>
   </body>
 </html>
