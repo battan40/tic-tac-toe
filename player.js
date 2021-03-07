@@ -1,7 +1,6 @@
 class Player {
   constructor(playerName, icon) {
     this.icon = icon;
-    console.log(this.icon)
     this.iconCounter = 0;
     this.name = playerName;
     this.squaresPlayedList = [];

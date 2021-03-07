@@ -25,6 +25,7 @@ class Game {
       this.gameBoard.splice(squareToChange, 1, this.playerTwo.icon);
       this.playerTwo.iconCounter++
       this.playerTwo.squaresPlayedList.push(parseInt(squareToChange));
+      console.log(this.playerTwo.squaresPlayedList);
       this.searchForWin(this.playerTwo);
       this.changePlayer();
     }
@@ -39,21 +40,21 @@ class Game {
   }
 
   searchForWin(personPlaying) {
-    console.log(this.gameBoard);
+    console.log("what is this", personPlaying);
     for (var i = 0; i < this.allPossibleWins.length; i++) {
-      if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i])) {
+      if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0] && this.allPossibleWins[i][1] && this.allPossibleWins[i][2])) {
         personPlaying.winCount++
         this.win = true;
-        console.log(personPlaying.name, "wins")
         personPlaying.saveWinsToStorage();
+        this.terminateGame();
+      } else {
+        this.searchForATie();
       }
     }
-      this.searchForATie();
   }
 
   searchForATie() {
     if (!this.win && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
-        console.log("Its a tie")
       this.terminateGame()
     }
   }

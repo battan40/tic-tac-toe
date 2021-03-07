@@ -7,5 +7,4 @@ gameBoardSquares.addEventListener('click', pickedSquare);
 function pickedSquare(event) {
   var clickedSquare = event.target.id;
   currentGame.playGame(clickedSquare);
-
 }
