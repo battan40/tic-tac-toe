@@ -1,13 +1,11 @@
-// var currentGame = new Game();
-//
-// var gameBoardSquares = document.querySelector('#gameBoardGrid');
-//
-// gameBoardSquares.addEventListener('click', pickSquare);
-//
-// function pickSquare(event) {
-//   var clickedSquare = event.target;
-//   console.log(clickedSquare);
-//   console.log(currentGame);
-//   currentGame.playGame(clickedSquare);
-//
-// }
+var currentGame = new Game();
+
+var gameBoardSquares = document.querySelector('#gameBoardGrid');
+
+gameBoardSquares.addEventListener('click', pickedSquare);
+
+function pickedSquare(event) {
+  var clickedSquare = event.target.id;
+  currentGame.playGame(clickedSquare);
+
+}
