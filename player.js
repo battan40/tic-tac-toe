@@ -1,16 +1,15 @@
 class Player {
   constructor(playerName, icon) {
-    console.log(playerName);
-    console.log(icon);
-    this.name = playerName;
-    this.id = Date.now();
     this.icon = icon;
+    this.iconCounter = 0;
+    this.name = playerName;
+    this.squaresPlayedList = [];
     this.winCount = 0;
   }
 
   saveWinsToStorage() {
     var stringifyIt = JSON.stringify(this);
-    localStorage.setItem(this.id, stringifyIt)
+    localStorage.setItem(this.name, stringifyIt)
   }
 
   retrieveWinsFromStorage() {
