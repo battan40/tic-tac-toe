@@ -1,8 +1,9 @@
 class Player {
   constructor(playerName, icon) {
-    this.name = playerName;
-    this.id = Date.now();
     this.icon = icon;
+    this.iconCounter = 0;
+    this.id = Date.now();
+    this.name = playerName;
     this.squaresPlayedList = [];
     this.winCount = 0;
   }
