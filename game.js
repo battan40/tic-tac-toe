@@ -42,10 +42,10 @@ class Game {
   }
 
 
-    searchForWin(personPlaying) {
-      console.log("searchForWin", personPlaying)
-      for (var i = 0; i < allPossibleWins.length; i++) {
-        if (this.squaresPlayedList.includes(allPossibleWins[i])) {
+  searchForWin(personPlaying) {
+    console.log("searchForWin", personPlaying)
+    for (var i = 0; i < allPossibleWins.length; i++) {
+      if (this.squaresPlayedList.includes(allPossibleWins[i])) {
         personPlaying.winCount++
         this.win = true;
         console.log(personPlaying.winCount)
@@ -55,4 +55,13 @@ class Game {
       this.searchForATie();
   }
 
-  
+  searchForATie() {
+    if (!allPossibleWins && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
+      this.terminateGame()
+    }
+  }
+
+  terminateGame() {
+    var currentGame = new Game();
+  }
+}
