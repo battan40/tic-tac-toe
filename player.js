@@ -3,6 +3,7 @@ class Player {
     this.name = playerName;
     this.id = Date.now();
     this.icon = icon;
+    this.squaresPlayedList = [];
     this.winCount = 0;
   }
 
