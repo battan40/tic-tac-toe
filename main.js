@@ -5,8 +5,8 @@ var gameBoardSquares = document.querySelector('#gameBoardGrid');
 gameBoardSquares.addEventListener('click', pickSquare);
 
 function pickSquare(event) {
+  var clickedSquare = event.target;
+  console.log(clickedSquare);
   console.log(game);
-  var clickedSquare = event.target.id;
-  console.log("Inside PickSquare var", clickedSquare)
   game.playGame(clickedSquare);
 }

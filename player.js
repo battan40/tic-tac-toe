@@ -1,7 +1,5 @@
 class Player {
   constructor(playerName, icon) {
-    console.log(playerName);
-    console.log(icon);
     this.name = playerName;
     this.id = Date.now();
     this.icon = icon;

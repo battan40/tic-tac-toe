@@ -3,29 +3,28 @@ class Game {
     this.playerOne = new Player('player1', '♥️');
     this.playerTwo = new Player('player2', '⭐');
     this.turnTracker = "player1";
-    this.gameboard = {
-
-      topRowLeft: null,
-      topRowMiddle: null,
-      topRowRight: null,
-      centerRowLeft: null,
-      centerRowMiddle: null,
-      centerRowRight: null,
-      lastRowLeft: null,
-      lastRowMiddle: null,
-      lastRowRight: null,
+    this.gameBoard = {
+      topRowLeft: '',
+      topRowMiddle: '',
+      topRowRight: '',
+      centerRowLeft: '',
+      centerRowMiddle: '',
+      centerRowRight: '',
+      lastRowLeft: '',
+      lastRowMiddle: '',
+      lastRowRight: '',
     }
   }
   playGame(chosenSquare) {
-    if (chosenSquare.value === null)  {
-      this.addIcon();
-
+    console.log(chosenSquare);
+    if (this.gameBoard[chosenSquare.id] === '')  {
+      this.addIcon(chosenSquare);
     }
   }
-  addIcon() {
-    this.gameBoard.innerText = this.playerOne.icon;
+  addIcon(squareToChange) {
+
+    squareToChange.innerText = this.playerOne.icon;
   }
   changePlayer() {
-
   }
 }
