@@ -60,14 +60,16 @@ button:hover {
   height: 100%;
 }
 
-.top-title {
+.top-title,
+.winner-declaration {
   align-items: center;
   background-image: linear-gradient(#f0eadc 1%, #b9efe1, lavender);
   display: flex;
   flex-direction: column-reverse;
-  font-size: 5em;
+  font-size: 2em;
   padding-bottom: 5%;
 }
+
 
 .game-board-grid {
   display: grid;

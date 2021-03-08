@@ -4,7 +4,7 @@ class Game {
     this.gameBoard = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     this.playerOne = new Player('player1', '♥️');
     this.playerTwo = new Player('player2', '⭐');
-    this.turnTracker = this.playerOne.name;
+    this.turnTracker = this.playerOne;
     this.win = false;
   }
 
@@ -15,36 +15,39 @@ class Game {
   }
 
   addIcon(squareToChange) {
-    if (this.turnTracker === this.playerOne.name) {
+    if (this.turnTracker === this.playerOne) {
       this.gameBoard.splice(squareToChange, 1, this.playerOne.icon);
+      console.log(this.gameBoard);
       this.playerOne.iconCounter++
       this.playerOne.squaresPlayedList.push(parseInt(squareToChange));
       this.searchForWin(this.playerOne);
       this.changePlayer();
     } else {
       this.gameBoard.splice(squareToChange, 1, this.playerTwo.icon);
+          console.log(this.gameBoard);
       this.playerTwo.iconCounter++
       this.playerTwo.squaresPlayedList.push(parseInt(squareToChange));
-      console.log(this.playerTwo.squaresPlayedList);
       this.searchForWin(this.playerTwo);
       this.changePlayer();
     }
   }
 
   changePlayer() {
-    if (this.turnTracker === this.playerOne.name) {
-      this.turnTracker = this.playerTwo.name;
+    if (this.turnTracker === this.playerOne) {
+      this.turnTracker = this.playerTwo;
     } else {
-      this.turnTracker = this.playerOne.name;
+      this.turnTracker = this.playerOne;
     }
   }
 
   searchForWin(personPlaying) {
-    console.log("what is this", personPlaying);
-    for (var i = 0; i < this.allPossibleWins.length; i++) {
-      if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0] && this.allPossibleWins[i][1] && this.allPossibleWins[i][2])) {
-        personPlaying.winCount++
+    for (var i = 0; i < this.gameBoard.length; i++) {
+       console.log(this.allPossibleWins[i][0]);
+      if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][1]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][2])) {
         this.win = true;
+        console.log('Winner!')
+        console.log(personPlaying.squaresPlayedList);
+        personPlaying.winCount++
         personPlaying.saveWinsToStorage();
         this.terminateGame();
       } else {
