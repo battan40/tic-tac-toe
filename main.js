@@ -21,15 +21,18 @@ function pageLoads() {
 }
 
 function startGame(event) {
-  showIcon(event.target);
-  currentGame.playGame(event.target.id);
-  showCurrentTurn();
-  declarationOfGameStatus()
+  if (!currentGame.win){
+    showIcon(event.target);
+    currentGame.playGame(event.target.id);
+    showCurrentTurn();
+    declarationOfGameStatus();
+  }
+
   //When a player plays a turn i want the hearts and stars to alternate with the messages, until a win or a draw; if there is a draw I want the message at the top to display a new string, then reset the whole gameBoard; if there is a win i want the message at the top to change and the wins to save and the whole board to reset
 }
 
 function showIcon(clickedSquareParam) {
-  if (clickedSquareParam.innerText === '' && !currentGame.win) {
+  if (clickedSquareParam.innerText === '') {
   clickedSquareParam.innerText = currentGame.turnTracker.icon
  }
 }
