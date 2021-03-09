@@ -4,47 +4,42 @@ class Game {
     this.gameBoard = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     this.playerOne = new Player('player1', '♥️');
     this.playerTwo = new Player('player2', '⭐');
-    this.turnTracker = this.playerOne.name;
+    this.turnTracker = this.playerOne;
     this.win = false;
   }
 
   playGame(chosenSquare) {
     if (this.playerOne.icon && this.playerTwo.icon !== this.gameBoard[chosenSquare]){
-      this.addIcon(chosenSquare);
+      this.addIcon(chosenSquare, this.turnTracker);
     }
   }
 
-  addIcon(squareToChange) {
-    if (this.turnTracker === this.playerOne.name) {
-      this.gameBoard.splice(squareToChange, 1, this.playerOne.icon);
-      this.playerOne.iconCounter++
-      this.playerOne.squaresPlayedList.push(parseInt(squareToChange));
-      this.searchForWin(this.playerOne);
-      this.changePlayer();
-    } else {
-      this.gameBoard.splice(squareToChange, 1, this.playerTwo.icon);
-      this.playerTwo.iconCounter++
-      this.playerTwo.squaresPlayedList.push(parseInt(squareToChange));
-      console.log(this.playerTwo.squaresPlayedList);
-      this.searchForWin(this.playerTwo);
-      this.changePlayer();
+
+  addIcon(squareToChange, currentPlayer) {
+      this.gameBoard.splice(squareToChange, 1, currentPlayer.icon);
+      console.log(this.gameBoard);
+      currentPlayer.iconCounter++
+      currentPlayer.squaresPlayedList.push(parseInt(squareToChange));
+      this.searchForWin(currentPlayer);
+      if (!this.win) {
+        this.changePlayer();
+      }
     }
-  }
 
   changePlayer() {
-    if (this.turnTracker === this.playerOne.name) {
-      this.turnTracker = this.playerTwo.name;
+    if (this.turnTracker === this.playerOne) {
+      this.turnTracker = this.playerTwo;
     } else {
-      this.turnTracker = this.playerOne.name;
+      this.turnTracker = this.playerOne;
     }
   }
 
   searchForWin(personPlaying) {
-    console.log("what is this", personPlaying);
-    for (var i = 0; i < this.allPossibleWins.length; i++) {
-      if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0] && this.allPossibleWins[i][1] && this.allPossibleWins[i][2])) {
-        personPlaying.winCount++
+    for (var i = 0; i < this.gameBoard.length; i++) {
+       console.log(this.allPossibleWins[i][0]);
+      if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][1]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][2])) {
         this.win = true;
+        personPlaying.winCount++
         personPlaying.saveWinsToStorage();
         this.terminateGame();
       } else {
