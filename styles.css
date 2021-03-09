@@ -15,13 +15,12 @@ html {
 button:hover {
   border: none;
   outline: none;
-  color: slateblue;
 }
 
 .squares {
   cursor: pointer;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
 
 .main {
