@@ -38,16 +38,11 @@ class Game {
         this.win = true;
         personPlaying.winCount++
         personPlaying.saveWinsToStorage();
-      } else {
-        this.searchForATie();
       }
     }
   }
 
-  searchForATie() {
-    if (!this.win && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
-    }
-  }
+
 
   startNewGame() {
     currentGame = new Game;
