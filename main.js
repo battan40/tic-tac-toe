@@ -17,7 +17,6 @@ function pageLoads() {
 function startGame(event) {
   if (!currentGame.win){
     showIcon(event.target);
-    console.log(event.target);
     currentGame.playGame(event.target.id);
     showCurrentTurn();
     declarationOfGameStatus();

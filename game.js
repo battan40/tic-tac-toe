@@ -15,8 +15,6 @@ class Game {
   }
 
   addIcon(squareToChange, currentPlayer) {
-    console.log(squareToChange);
-    console.log(currentPlayer);
       this.gameBoard.splice(squareToChange, 1, currentPlayer.icon);
       currentPlayer.iconCounter++
       currentPlayer.squaresPlayedList.push(parseInt(squareToChange));
@@ -41,15 +39,15 @@ class Game {
         personPlaying.winCount++
         personPlaying.saveWinsToStorage();
       } else {
-        //this.searchForATie();
+        this.searchForATie();
       }
     }
   }
 
-  //searchForATie() {
-  //   if (!this.win && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
-  //   }
-  // }
+  searchForATie() {
+    if (!this.win && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
+    }
+  }
 
   startNewGame() {
     currentGame = new Game;
