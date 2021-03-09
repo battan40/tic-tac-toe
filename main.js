@@ -1,18 +1,17 @@
 var currentGame = new Game();
 
-var gameBoardSquares = document.querySelector('#gameBoardGrid');
+var gameBoard = document.querySelector('#gameBoardGrid');
 var playerOneWinCountDisplay = document.querySelector('#leftPlayer');
 var playerTwoWinCountDisplay = document.querySelector('#rightPlayer');
-var turnDisplay = document.querySelector('#turnDisplay')
+var turnDisplay = document.querySelector('#turnDisplay');
+var boardSquares = document.querySelectorAll('.board-squares')
 
-gameBoardSquares.addEventListener('click', startGame);
+gameBoard.addEventListener('click', startGame);
 window.addEventListener('load', pageLoads);
 
 function pageLoads() {
   showCurrentTurn();
   displayWinCount();
-  console.log(currentGame.playerOne);
-  console.log(currentGame.playerTwo);
 }
 
 function startGame(event) {
@@ -47,14 +46,14 @@ function declarationOfGameStatus() {
     if (currentGame.win) {
     turnDisplay.innerText = `${currentGame.turnTracker.name} IS THE WINNER!`
     displayWinCount();
+    setTimeout(resetGame, 2000)
   }
 }
 
 function resetGame() {
-  for (var i = 0; i < gameBoardSquares.length; i++) {
-    gameBoardSquares[i].innerText = '';
-    currentGame.turnTracker.squaresPlayedList = [];
-    currentGame.turnTracker.iconCounter = 0;
-    currentGame.win = false;
+  for (var i = 0; i < boardSquares.length; i++) {
+    boardSquares[i].innerText = '';
   }
+  currentGame.startNewGame();
+  showCurrentTurn();
 }

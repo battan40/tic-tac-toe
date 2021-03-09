@@ -1,6 +1,6 @@
 class Game {
   constructor() {
-    this.allPossibleWins = [[0, 1, 2], [0, 3, 6], [0, 4, 5], [0, 4, 8], [1, 4, 7], [2, 4, 6], [2, 5, 8], [3, 4, 5], [6, 7, 8]];
+    this.allPossibleWins = [[0, 1, 2], [0, 3, 6], [0, 4, 8], [1, 4, 7], [2, 4, 6], [2, 5, 8], [3, 4, 5], [6, 7, 8]];
     this.gameBoard = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     this.playerOne = new Player('player1', '♥️');
     this.playerTwo = new Player('player2', '⭐');
@@ -16,7 +16,6 @@ class Game {
 
   addIcon(squareToChange, currentPlayer) {
       this.gameBoard.splice(squareToChange, 1, currentPlayer.icon);
-      console.log(this.gameBoard);
       currentPlayer.iconCounter++
       currentPlayer.squaresPlayedList.push(parseInt(squareToChange));
       this.searchForWin(currentPlayer);
@@ -34,13 +33,11 @@ class Game {
   }
 
   searchForWin(personPlaying) {
-    for (var i = 0; i < this.gameBoard.length; i++) {
-       console.log(this.allPossibleWins[i][0]);
+    for (var i = 0; i < this.allPossibleWins.length; i++) {
       if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][1]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][2])) {
         this.win = true;
         personPlaying.winCount++
         personPlaying.saveWinsToStorage();
-        this.terminateGame();
       } else {
         this.searchForATie();
       }
@@ -49,11 +46,10 @@ class Game {
 
   searchForATie() {
     if (!this.win && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
-      this.terminateGame()
     }
   }
 
-  terminateGame() {
-    var currentGame = new Game();
+  startNewGame() {
+    currentGame = new Game;
   }
 }
