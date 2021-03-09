@@ -9,9 +9,6 @@ gameBoardSquares.addEventListener('click', startGame);
 window.addEventListener('load', pageLoads);
 
 function pageLoads() {
-  currentGame.playerOne.winCount =
-  currentGame.playerOne.retrieveWinsFromStorage();
-  currentGame.playerTwo.winCount = currentGame.playerTwo.retrieveWinsFromStorage();
   showCurrentTurn();
   displayWinCount();
   console.log(currentGame.playerOne);
