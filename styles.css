@@ -21,7 +21,6 @@ button:hover {
 .squares {
   cursor: pointer;
   border: none;
-  /* font-size: 40px; */
   padding: 10px 20px;
 }
 
