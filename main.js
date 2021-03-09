@@ -57,13 +57,8 @@ function declarationOfGameStatus() {
   //setTimeOut(startGameOver, 2000)
     if (currentGame.win) {
     turnDisplay.innerText = `${currentGame.turnTracker.name} IS THE WINNER!`
+    displayWinCount();
   }
-}
-
-function startNewGame() {
-  currentGame.resetGame();
-  endPlayability();
-  showCurrentTurn();
 }
 
 function startGameOver(){
@@ -71,11 +66,6 @@ function startGameOver(){
   currentGame.terminateGame();
   endPlayability();
   showCurrentTurn();
-}
-
-function endPlayability() {
-  //how do you turn off an event listener that triggers the whole playGame method
-  //toggle?
 }
 
 function resetGame() {
