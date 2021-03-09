@@ -1,4 +1,4 @@
-# TIC TAC Toe
+# TIC TAC TOE
 
 
 #### A Game For The Young At Heart
@@ -48,7 +48,7 @@
 
 ## Road Map
 
-##### Future Iterations
+##### Future Iterations should include:
 
 * A log in page
 * The ability to choose an icon or token for a player name
