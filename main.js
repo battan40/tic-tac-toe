@@ -44,7 +44,7 @@ function showCurrentTurn() {
 
 function declarationOfGameStatus() {
     if (currentGame.win) {
-    turnDisplay.innerText = `${currentGame.turnTracker.name} IS THE WINNER!`
+    turnDisplay.innerText = `${currentGame.turnTracker.icon} IS THE WINNER!`
     displayWinCount();
     setTimeout(resetGame, 2000)
   } else if (!currentGame.win && currentGame.tie) {
