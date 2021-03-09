@@ -36,8 +36,10 @@ class Game {
       currentPlayer.iconCounter++
       currentPlayer.squaresPlayedList.push(parseInt(squareToChange));
       this.searchForWin(currentPlayer);
+      if (!this.win) {
+        this.changePlayer();
+      }
     }
-
 
   changePlayer() {
     if (this.turnTracker === this.playerOne) {
