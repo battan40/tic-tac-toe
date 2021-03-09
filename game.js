@@ -14,21 +14,6 @@ class Game {
     }
   }
 
-  // addIcon(squareToChange) {
-  //   if (this.turnTracker === this.playerOne) {
-  //     this.gameBoard.splice(squareToChange, 1, this.playerOne.icon);
-  //     console.log(this.gameBoard);
-  //     this.playerOne.iconCounter++
-  //     this.playerOne.squaresPlayedList.push(parseInt(squareToChange));
-  //     this.searchForWin(this.playerOne);
-  //   } else {
-  //     this.gameBoard.splice(squareToChange, 1, this.playerTwo.icon);
-  //         console.log(this.gameBoard);
-  //     this.playerTwo.iconCounter++
-  //     this.playerTwo.squaresPlayedList.push(parseInt(squareToChange));
-  //     this.searchForWin(this.playerTwo);
-  //   }
-  // }
 
   addIcon(squareToChange, currentPlayer) {
       this.gameBoard.splice(squareToChange, 1, currentPlayer.icon);
@@ -54,8 +39,6 @@ class Game {
        console.log(this.allPossibleWins[i][0]);
       if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][1]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][2])) {
         this.win = true;
-        console.log('Winner!')
-        console.log(personPlaying.squaresPlayedList);
         personPlaying.winCount++
         personPlaying.saveWinsToStorage();
         this.terminateGame();
@@ -64,7 +47,6 @@ class Game {
       }
     }
   }
-
 
   searchForATie() {
     if (!this.win && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
