@@ -10,27 +10,34 @@ class Game {
 
   playGame(chosenSquare) {
     if (this.playerOne.icon && this.playerTwo.icon !== this.gameBoard[chosenSquare]){
-      this.addIcon(chosenSquare);
+      this.addIcon(chosenSquare, this.turnTracker);
     }
   }
 
-  addIcon(squareToChange) {
-    if (this.turnTracker === this.playerOne) {
-      this.gameBoard.splice(squareToChange, 1, this.playerOne.icon);
+  // addIcon(squareToChange) {
+  //   if (this.turnTracker === this.playerOne) {
+  //     this.gameBoard.splice(squareToChange, 1, this.playerOne.icon);
+  //     console.log(this.gameBoard);
+  //     this.playerOne.iconCounter++
+  //     this.playerOne.squaresPlayedList.push(parseInt(squareToChange));
+  //     this.searchForWin(this.playerOne);
+  //   } else {
+  //     this.gameBoard.splice(squareToChange, 1, this.playerTwo.icon);
+  //         console.log(this.gameBoard);
+  //     this.playerTwo.iconCounter++
+  //     this.playerTwo.squaresPlayedList.push(parseInt(squareToChange));
+  //     this.searchForWin(this.playerTwo);
+  //   }
+  // }
+
+  addIcon(squareToChange, currentPlayer) {
+      this.gameBoard.splice(squareToChange, 1, currentPlayer.icon);
       console.log(this.gameBoard);
-      this.playerOne.iconCounter++
-      this.playerOne.squaresPlayedList.push(parseInt(squareToChange));
-      this.searchForWin(this.playerOne);
-      this.changePlayer();
-    } else {
-      this.gameBoard.splice(squareToChange, 1, this.playerTwo.icon);
-          console.log(this.gameBoard);
-      this.playerTwo.iconCounter++
-      this.playerTwo.squaresPlayedList.push(parseInt(squareToChange));
-      this.searchForWin(this.playerTwo);
-      this.changePlayer();
+      currentPlayer.iconCounter++
+      currentPlayer.squaresPlayedList.push(parseInt(squareToChange));
+      this.searchForWin(currentPlayer);
     }
-  }
+
 
   changePlayer() {
     if (this.turnTracker === this.playerOne) {
@@ -55,6 +62,7 @@ class Game {
       }
     }
   }
+
 
   searchForATie() {
     if (!this.win && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
