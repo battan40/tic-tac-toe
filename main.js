@@ -12,13 +12,12 @@ window.addEventListener('load', pageLoads);
 function pageLoads() {
   showCurrentTurn();
   displayWinCount();
-  console.log(currentGame.playerOne);
-  console.log(currentGame.playerTwo);
 }
 
 function startGame(event) {
   if (!currentGame.win){
     showIcon(event.target);
+    console.log(event.target);
     currentGame.playGame(event.target.id);
     showCurrentTurn();
     declarationOfGameStatus();

@@ -15,8 +15,9 @@ class Game {
   }
 
   addIcon(squareToChange, currentPlayer) {
+    console.log(squareToChange);
+    console.log(currentPlayer);
       this.gameBoard.splice(squareToChange, 1, currentPlayer.icon);
-      console.log(this.gameBoard);
       currentPlayer.iconCounter++
       currentPlayer.squaresPlayedList.push(parseInt(squareToChange));
       this.searchForWin(currentPlayer);
@@ -35,26 +36,22 @@ class Game {
 
   searchForWin(personPlaying) {
     for (var i = 0; i < this.gameBoard.length; i++) {
-       console.log(this.allPossibleWins[i][0]);
       if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][1]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][2])) {
         this.win = true;
         personPlaying.winCount++
         personPlaying.saveWinsToStorage();
-        // this.startNewGame();
       } else {
-        this.searchForATie();
+        //this.searchForATie();
       }
     }
   }
 
-  searchForATie() {
-    if (!this.win && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
-      // this.startNewGame()
-    }
-  }
+  //searchForATie() {
+  //   if (!this.win && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
+  //   }
+  // }
 
   startNewGame() {
     currentGame = new Game;
-    console.log("what's happening here")
   }
 }
