@@ -4,7 +4,7 @@ class Player {
     this.iconCounter = 0;
     this.name = playerName;
     this.squaresPlayedList = [];
-    this.winCount = 0;
+    this.winCount = this.retrieveWinsFromStorage() || 0;
   }
 
   saveWinsToStorage() {
