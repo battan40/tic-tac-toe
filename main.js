@@ -11,8 +11,6 @@ window.addEventListener('load', pageLoads);
 function pageLoads() {
   showCurrentTurn();
   displayWinCount();
-  currentGame.playerOne.retrieveWinsFromStorage();
-  currentGame.playerTwo.retrieveWinsFromStorage();
   console.log(currentGame.playerOne);
   console.log(currentGame.playerTwo);
 }
@@ -52,13 +50,6 @@ function declarationOfGameStatus() {
   }
 }
 
-function startGameOver(){
-  resetGame();
-  currentGame.terminateGame();
-  endPlayability();
-  showCurrentTurn();
-}
-
 function resetGame() {
   for (var i = 0; i < gameBoardSquares.length; i++) {
     gameBoardSquares[i].innerText = '';
@@ -66,9 +57,4 @@ function resetGame() {
     currentGame.turnTracker.iconCounter = 0;
     currentGame.win = false;
   }
-}
-
-function persistStorage() {
-
-  resetGame();
 }
