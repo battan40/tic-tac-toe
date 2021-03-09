@@ -15,19 +15,19 @@ html {
 button:hover {
   border: none;
   outline: none;
-  color: slateblue;
 }
 
 .squares {
   cursor: pointer;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 10px;
 }
 
 .main {
   display: flex;
   margin: 0;
   width: 100%;
+  height: 121vh;
 }
 
 /* ~~~~~ Left ~~~~~ */
@@ -37,7 +37,7 @@ button:hover {
   align-items: center;
   background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
   width: 28%;
-  height: 104vh;
+  height: 100%;
   font-size: 1.6em;
 }
 
@@ -87,7 +87,6 @@ button:hover {
   background: #ffffff;
   border: 4px solid lavender;
   box-shadow: 10px 5px 5px lavender;
-  color: slateblue;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,7 +101,7 @@ button:hover {
   align-items: center;
   background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
   width: 28%;
-  height: 104vh;
+  height: 100%;
   font-size: 1.6em;
 }
 

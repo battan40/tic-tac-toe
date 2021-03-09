@@ -36,19 +36,19 @@ function displayWinCount() {
 
 function showCurrentTurn() {
   if (currentGame.turnTracker === currentGame.playerOne) {
-    turnDisplay.innerText =  `${currentGame.playerOne.name} it's your turn!`;
+    turnDisplay.innerText =  `${currentGame.playerOne.icon} it's your turn!`;
   } else if (currentGame.turnTracker === currentGame.playerTwo) {
-    turnDisplay.innerText = `${currentGame.playerTwo.name} it's your turn`
+    turnDisplay.innerText = `${currentGame.playerTwo.icon} it's your turn`
   }
 }
 
 function declarationOfGameStatus() {
     if (currentGame.win) {
-    turnDisplay.innerText = `${currentGame.turnTracker.name} IS THE WINNER!`
+    turnDisplay.innerText = `${currentGame.turnTracker.icon} IS THE WINNER!`
     displayWinCount();
     setTimeout(resetGame, 2000)
-  } else if (!currentGame.win && currentGame.playerOne.iconCounter +          currentGame.playerTwo.iconCounter === 9){
-    turnDisplay.innerText = `WE HAVE A TIE!!!`
+  } else if (!currentGame.win && currentGame.tie) {
+    turnDisplay.innerText = 'WE HAVE A TIE!!!'
     setTimeout(resetGame, 3000)
   }
 }
