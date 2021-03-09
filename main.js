@@ -29,8 +29,9 @@ function startGame(event) {
 }
 
 function showIcon(clickedSquareParam) {
-  if (clickedSquareParam.innerText === '')
+  if (clickedSquareParam.innerText === '' && !currentGame.win) {
   clickedSquareParam.innerText = currentGame.turnTracker.icon
+ }
 }
 
 function displayWinCount() {
