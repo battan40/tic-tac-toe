@@ -28,6 +28,7 @@ button:hover {
   display: flex;
   margin: 0;
   width: 100%;
+  height: 121vh;
 }
 
 /* ~~~~~ Left ~~~~~ */
@@ -37,7 +38,7 @@ button:hover {
   align-items: center;
   background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
   width: 28%;
-  height: 104vh;
+  height: 100%;
   font-size: 1.6em;
 }
 
@@ -102,7 +103,7 @@ button:hover {
   align-items: center;
   background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
   width: 28%;
-  height: 104vh;
+  height: 100%;
   font-size: 1.6em;
 }
 
