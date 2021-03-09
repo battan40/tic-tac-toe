@@ -14,7 +14,6 @@ class Game {
     }
   }
 
-
   addIcon(squareToChange, currentPlayer) {
       this.gameBoard.splice(squareToChange, 1, currentPlayer.icon);
       console.log(this.gameBoard);
