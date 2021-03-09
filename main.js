@@ -50,11 +50,6 @@ function declarationOfGameStatus() {
   }
 }
 
-// function startGameOver(){
-//   resetGame();
-//   showCurrentTurn();
-// }
-
 function resetGame() {
   for (var i = 0; i < gameBoardSquares.length; i++) {
     gameBoardSquares[i].innerText = '';
