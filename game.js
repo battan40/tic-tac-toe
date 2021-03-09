@@ -33,15 +33,21 @@ class Game {
   }
 
   searchForWin(personPlaying) {
-    for (var i = 0; i < this.allPossibleWins.length; i++) {
-      if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][1]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][2])) {
-        this.win = true;
-        personPlaying.winCount++
-        personPlaying.saveWinsToStorage();
-      }
-    }
-  }
+     for (var i = 0; i < this.allPossibleWins.length; i++) {
+       if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][1]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][2])) {
+         this.win = true;
+         personPlaying.winCount++
+         personPlaying.saveWinsToStorage();
+       }
+     }
+      this.searchForTie();
+   }
 
+   searchForTie() {
+     if (!this.win && this.playerOne.iconCounter + this.playerTwo.iconCounter === 9) {
+     this.tie = true;
+     }
+   }
 
 
   startNewGame() {

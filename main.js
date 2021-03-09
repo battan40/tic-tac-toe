@@ -47,8 +47,8 @@ function declarationOfGameStatus() {
     turnDisplay.innerText = `${currentGame.turnTracker.name} IS THE WINNER!`
     displayWinCount();
     setTimeout(resetGame, 2000)
-  } else if (!currentGame.win && currentGame.playerOne.iconCounter +          currentGame.playerTwo.iconCounter === 9){
-    turnDisplay.innerText = `WE HAVE A TIE!!!`
+  } else if (!currentGame.win && currentGame.tie) {
+    turnDisplay.innerText = 'WE HAVE A TIE!!!'
     setTimeout(resetGame, 3000)
   }
 }
