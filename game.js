@@ -6,6 +6,7 @@ class Game {
     this.playerTwo = new Player('player2', '⭐');
     this.turnTracker = this.playerOne;
     this.win = false;
+    this.tie = false;
   }
 
   playGame(chosenSquare) {
@@ -40,7 +41,7 @@ class Game {
          personPlaying.saveWinsToStorage();
        }
      }
-      this.searchForTie();
+    this.searchForTie();
    }
 
    searchForTie() {
@@ -48,7 +49,6 @@ class Game {
      this.tie = true;
      }
    }
-
 
   startNewGame() {
     currentGame = new Game;
