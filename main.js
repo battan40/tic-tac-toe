@@ -36,9 +36,9 @@ function displayWinCount() {
 
 function showCurrentTurn() {
   if (currentGame.turnTracker === currentGame.playerOne) {
-    turnDisplay.innerText =  `${currentGame.playerOne.name} it's your turn!`;
+    turnDisplay.innerText =  `${currentGame.playerOne.icon} it's your turn!`;
   } else if (currentGame.turnTracker === currentGame.playerTwo) {
-    turnDisplay.innerText = `${currentGame.playerTwo.name} it's your turn`
+    turnDisplay.innerText = `${currentGame.playerTwo.icon} it's your turn`
   }
 }
 
