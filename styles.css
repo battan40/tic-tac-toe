@@ -50,7 +50,6 @@ button:hover {
 .left-Player {
   display: flex;
   color: slateblue;
-
 }
 
 /* ~~~~~ MIDDLE GRID ~~~~~ */
@@ -68,7 +67,6 @@ button:hover {
   font-size: 2em;
   padding-bottom: 5%;
 }
-
 
 .game-board-grid {
   display: grid;
@@ -114,9 +112,4 @@ button:hover {
   display: flex;
   padding-top: 7%;
   font-size: 3em;
-}
-
-/* ~~~~~ BROAD ~~~~~ */
-.hidden {
-  display: none;
 }
