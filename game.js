@@ -35,7 +35,7 @@ class Game {
   }
 
   searchForWin(personPlaying) {
-    for (var i = 0; i < this.gameBoard.length; i++) {
+    for (var i = 0; i < this.allPossibleWins.length; i++) {
       if (personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][0]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][1]) && personPlaying.squaresPlayedList.includes(this.allPossibleWins[i][2])) {
         this.win = true;
         personPlaying.winCount++
