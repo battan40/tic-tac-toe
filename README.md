@@ -58,7 +58,4 @@
 
 ## Preview
 
-
-https://user-images.githubusercontent.com/58871312/110557400-c4193680-80fd-11eb-9920-fe983cbd2c9d.mov
-
-
+![Quick Look Ahead](https://media.giphy.com/media/OghD1bbHvoJtgyFFbg/giphy.gif)
