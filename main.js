@@ -15,7 +15,7 @@ function pageLoads() {
 }
 
 function startGame(event) {
-  if (!currentGame.win){
+  if (!currentGame.win && event.target.closest('.board-squares')){
     showIcon(event.target);
     currentGame.playGame(event.target.id);
     showCurrentTurn();
