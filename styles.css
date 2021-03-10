@@ -7,44 +7,44 @@
   padding: 0;
 }
 
-html {
-  font-family: 'Open Sans', sans-serif;
-  color: slateblue;
-}
-
 button:hover {
   border: none;
   outline: none;
 }
 
-.squares {
-  cursor: pointer;
-  border: none;
-  padding: 5px 10px;
+html {
+  color: slateblue;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .main {
   display: flex;
   margin: 0;
-  width: 100%;
   height: 121vh;
+  width: 100%;
+}
+
+.squares {
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
 }
 
 /* ~~~~~ Left ~~~~~ */
 .left {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
-  width: 28%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
   font-size: 1.6em;
+  height: 100%;
+  width: 28%;
 }
 
 .player1-icon {
   display: flex;
-  padding-top: 7%;
   font-size: 3em;
+  padding-top: 7%;
 }
 
 .left-Player {
@@ -54,8 +54,8 @@ button:hover {
 
 /* ~~~~~ MIDDLE GRID ~~~~~ */
 .middle-box {
-  width: 53%;
   height: 100%;
+  width: 53%;
 }
 
 .top-title,
@@ -69,47 +69,47 @@ button:hover {
 }
 
 .game-board-grid {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px 20px;
-  padding: 2%;
-  box-shadow: 0 4px 8px 0 lavender;
   background-image: linear-gradient(#f0eadc 1%, #b9efe1, lavender);
   background-size: contain;
-  height: 100vh
+  box-shadow: 0 4px 8px 0 lavender;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px 20px;
+  height: 100vh;
+  justify-content: center;
+  padding: 2%;
 }
 
 .board-squares {
   align-items: center;
-  background: #ffffff;
+  background: #FFFFFF;
   border: 4px solid lavender;
   box-shadow: 10px 5px 5px lavender;
   display: flex;
   flex-direction: column;
+  font-size: 10em;
   justify-content: center;
   padding: 3%;
-  font-size: 10em;
 }
 
 /* ~~~~~ RIGHT ~~~~~ */
 .right {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   background-image: linear-gradient(lavender, #f0eadc, #b9efe1);
-  width: 28%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
   font-size: 1.6em;
+  height: 100%;
+  width: 28%;
 }
 
 .right-player {
-  display: flex;
   color: slateblue;
+  display: flex;
 }
 
 .player2-icon {
   display: flex;
-  padding-top: 7%;
   font-size: 3em;
+  padding-top: 7%;
 }
