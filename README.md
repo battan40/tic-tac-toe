@@ -55,3 +55,10 @@
 * As well as saved game boards displaying past wins, as well as a message that lets the user know when a board has been saved
 * CSS stylings to increase user experience of joy
 * Error handling to offer helpful hints when a user has run into commonly experienced issues
+
+## Preview
+
+
+https://user-images.githubusercontent.com/58871312/110557400-c4193680-80fd-11eb-9920-fe983cbd2c9d.mov
+
+
