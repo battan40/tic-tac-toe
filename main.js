@@ -1,10 +1,10 @@
 var currentGame = new Game();
 
+var boardSquares = document.querySelectorAll('.board-squares')
 var gameBoard = document.querySelector('#gameBoardGrid');
 var playerOneWinCountDisplay = document.querySelector('#leftPlayer');
 var playerTwoWinCountDisplay = document.querySelector('#rightPlayer');
 var turnDisplay = document.querySelector('#turnDisplay');
-var boardSquares = document.querySelectorAll('.board-squares')
 
 gameBoard.addEventListener('click', startGame);
 window.addEventListener('load', pageLoads);
